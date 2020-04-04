@@ -6,7 +6,7 @@
 1. Name of the venue
 2. Venue location
 3. Date of the Event
-![]
+![](images/concert-this.png)
 
 #### *node liri.js spotify-this-song '<song name here>' - This will return:
 
