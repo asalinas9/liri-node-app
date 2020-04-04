@@ -8,7 +8,7 @@ _Authentication Keys are stored in "keys.js", and its content its exported to th
 
 * The program also makes a request to the OMDb API by using the NPM module, where we also get a JSON object that includes everything we requested; title, year, IMDb rating, languague, among othe detais.
 
-### Below, you will find some screenshots of the node commands of the requests for each section.
+## Below, you will find some screenshots of the node commands of the requests for each section.
 
 #### node liri.js concert-this <artist/band name here> - This will return:
 1. Name of the venue
