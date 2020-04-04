@@ -2,7 +2,7 @@
 
 # The instructions are as follows:
 
-1. *node liri.js concert-this <artist/band name here> - This will return:
+## 1. node liri.js concert-this <artist/band name here> - This will return:
 Name of the venue
 Venue location
 Date of the Event
