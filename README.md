@@ -33,3 +33,4 @@
 #### *node liri.js do-what-it-says
 
 LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+![](images/do_what_it_says.png)
