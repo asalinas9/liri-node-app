@@ -2,10 +2,10 @@
 
 # The instructions are as follows:
 
-#### 1. node liri.js concert-this <artist/band name here> - This will return:
-Name of the venue
-Venue location
-Date of the Event
+#### node liri.js concert-this <artist/band name here> - This will return:
+1. Name of the venue
+2. Venue location
+3. Date of the Event
 ![]
 
 2. #node liri.js spotify-this-song '<song name here>' - This will return:
