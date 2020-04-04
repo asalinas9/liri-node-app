@@ -1,8 +1,12 @@
 # liri-node-app
 
-# The instructions are as follows:
+# How the app functions:
+
+*Authentication Keys are stored in "keys.js", and its content its exported to the "liri.js" file.
 
 * The program makes a request to the Spotify API where we get a JSON object that includes everything we requested for; artist, song, preview link, and album.
+
+* The program also makes a request to the OMDb API by using the NPM module, where we also get a JSON object that includes everything we requested; title, year, IMDb rating, languague, among othe detais.
 
 #### node liri.js concert-this <artist/band name here> - This will return:
 1. Name of the venue
