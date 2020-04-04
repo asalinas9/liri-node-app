@@ -28,6 +28,7 @@
 7. Plot of the movie.
 8. Actors in the movie.
 9. If a movie isn't provided, a default movie, 'Mr. Nobody', will be used.
+![](images/movie_this.png)
 
 #### *node liri.js do-what-it-says
 
