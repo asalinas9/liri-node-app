@@ -47,4 +47,4 @@ LIRI will take the text inside of random.txt and then use it to call one of LIRI
 1. Node.js
 2. Javascript
 3. Spotify API (via spotify NPM Module)
-4. OMDb API (via request NPM Module
+4. OMDb API (via request NPM Module)
