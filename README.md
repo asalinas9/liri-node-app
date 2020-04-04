@@ -2,13 +2,13 @@
 
 # The instructions are as follows:
 
-#### *node liri.js concert-this <artist/band name here> - This will return:
+#### node liri.js concert-this <artist/band name here> - This will return:
 1. Name of the venue
 2. Venue location
 3. Date of the Event
 ![](images/concert_this.png)
 
-#### *node liri.js spotify-this-song '<song name here>' - This will return:
+#### node liri.js spotify-this-song '<song name here>' - This will return:
 
 1. Artist(s)
 2. Song Name
@@ -17,7 +17,7 @@
 5. If no song is provided the default is "The Sign" by Ace of Base.
 ![](images/spotify_this.png)
 
-#### *node liri.js movie-this '<movie name here>' - This will return:
+#### node liri.js movie-this '<movie name here>' - This will return:
 
 1. Title.
 2. Year of release.
@@ -30,7 +30,7 @@
 9. If a movie isn't provided, a default movie, 'Mr. Nobody', will be used.
 ![](images/movie_this.png)
 
-#### *node liri.js do-what-it-says
+#### node liri.js do-what-it-says
 
 LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 ![](images/do_what_it_says.png)
