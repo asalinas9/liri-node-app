@@ -35,7 +35,7 @@ _Authentication Keys are stored in "keys.js", and its content its exported to th
 6. Language of the movie.
 7. Plot of the movie.
 8. Actors in the movie.
-  _If a movie isn't provided, a default movie, 'Mr. Nobody', will be used._
+ 5. _If a movie isn't provided, a default movie, 'Mr. Nobody', will be used._
 ![](images/movie_this.png)
 
 #### node liri.js do-what-it-says
