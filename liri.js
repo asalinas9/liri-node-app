@@ -10,6 +10,10 @@ var spotify = new Spotify(keys.spotify);
 var command = process.argv[2];
 var searchTerm = process.argv[3];
 
+fs.appendFile('log.txt', command + ',', function (err) {
+	if (err) throw err;
+});
+
 function concertThis() {
 	if (typeof searchTerm === 'undefined') {
 		console.log('You need to provide an artist to do a search...');
