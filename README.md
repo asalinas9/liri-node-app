@@ -22,7 +22,7 @@ _Authentication Keys are stored in "keys.js", and its content its exported to th
 2. Song Name
 3. preview link of the son
 4. The album
-  _If no song is provided the default is "The Sign" by Ace of Base._
+   1. _If no song is provided the default is "The Sign" by Ace of Base._
 ![](images/spotify_this.png)
 
 #### node liri.js movie-this '<movie name here>' - This will return:
