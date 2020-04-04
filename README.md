@@ -4,7 +4,7 @@
 
 _Authentication Keys are stored in "keys.js", and its content its exported to the "liri.js" file._
 
-* The program makes a request to the Spotify API where we get a JSON object that includes everything we requested for; artist, song, preview link, and album.
+* The program makes a request to the Spotify API where we get a JSON object that includes everything we ask for; artist, song, preview link, and album. 
 
 * The program also makes a request to the OMDb API by using the NPM module, where we also get a JSON object that includes everything we requested; title, year, IMDb rating, languague, among othe detais.
 
@@ -22,7 +22,7 @@ _Authentication Keys are stored in "keys.js", and its content its exported to th
 2. Song Name
 3. preview link of the son
 4. The album
-5. If no song is provided the default is "The Sign" by Ace of Base.
+  _If no song is provided the default is "The Sign" by Ace of Base._
 ![](images/spotify_this.png)
 
 #### node liri.js movie-this '<movie name here>' - This will return:
@@ -35,7 +35,7 @@ _Authentication Keys are stored in "keys.js", and its content its exported to th
 6. Language of the movie.
 7. Plot of the movie.
 8. Actors in the movie.
-9. If a movie isn't provided, a default movie, 'Mr. Nobody', will be used.
+  _If a movie isn't provided, a default movie, 'Mr. Nobody', will be used._
 ![](images/movie_this.png)
 
 #### node liri.js do-what-it-says
