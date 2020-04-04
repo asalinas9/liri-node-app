@@ -2,6 +2,8 @@
 
 # The instructions are as follows:
 
+* The program makes a request to the Spotify API where we get a JSON object that includes everything we requested for; artist, song, preview link, and album.
+
 #### node liri.js concert-this <artist/band name here> - This will return:
 1. Name of the venue
 2. Venue location
