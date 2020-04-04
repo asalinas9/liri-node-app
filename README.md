@@ -15,6 +15,7 @@
 3. preview link of the son
 4. The album
 5. If no song is provided the default is "The Sign" by Ace of Base.
+![](images/spotify_this.png)
 
 #### *node liri.js movie-this '<movie name here>' - This will return:
 
