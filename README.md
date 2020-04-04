@@ -36,7 +36,7 @@ LIRI will take the text inside of random.txt and then use it to call one of LIRI
 ![](images/do_what_it_says.png)
 
 # Technology Used
--[x] Node.js
-*Javascript
-*Spotify API (via spotify NPM Module)
-*OMDb API (via request NPM Module
+1.*Node.js
+2.*Javascript
+3.*Spotify API (via spotify NPM Module)
+4.*OMDb API (via request NPM Module
