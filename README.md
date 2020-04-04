@@ -2,7 +2,7 @@
 
 # How the app functions:
 
-*Authentication Keys are stored in "keys.js", and its content its exported to the "liri.js" file.
+_Authentication Keys are stored in "keys.js", and its content its exported to the "liri.js" file._
 
 * The program makes a request to the Spotify API where we get a JSON object that includes everything we requested for; artist, song, preview link, and album.
 
