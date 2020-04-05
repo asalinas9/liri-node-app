@@ -14,62 +14,59 @@ fs.appendFile('log.txt', command + ',', function (err) {
 	if (err) throw err;
 });
 
-function concertThis() {
-	if (typeof searchTerm === 'undefined') {
-		console.log('You need to provide an artist to do a search...');
-		return;
-	}
+function concertThis(artist) {
 	axios
 		.get(
 			'https://rest.bandsintown.com/artists/' +
-				searchTerm +
+				artist +
 				'/events?app_id=codingbootcamp'
 		)
 		.then(function (response) {
-			// console.log(response.data[0]);
-			if (response.data[0] != undefined) {
-				console.log('---------------------');
-				console.log(`Venue Name:  ${response.data[0].venue.name}`);
-				console.log(`Venue Location:  ${response.data[0].venue.city}`);
+			// Saving response into variable
+			let concerts = response.data;
+
+			// Using For loop to obtain specific data from bands in town api
+			for (let i = 0; i < concerts.length; i++) {
+				// Displaying venue info
+				console.log('Venue: ' + concerts[i].venue.name);
+				console.log('City: ' + concerts[i].venue.city);
+				// Using moment.js to convert date of events
 				console.log(
-					`Date of Event:  ${moment(response.data[0].datetime).format(
-						'MM/DD/YYYY'
-					)}`
+					'Event Date: ' + moment(concerts[i].datetime).format('MM/DD/YYYY')
 				);
-				console.log('---------------------');
-			} else {
-				console.log('No events found...');
 			}
 		})
-		.catch(function (error) {
-			console.log(error);
+		.catch((err) => {
+			if (err) {
+				console.log(err);
+			}
 		});
 }
 
-function spotifyThis() {
-	if (typeof searchTerm === 'undefined') {
+function spotifyThis(searchTerm) {
+	if (searchTerm === 'undefined') {
 		searchTerm = 'The Sign, Ace of Base';
 	}
-	spotify.search({type: 'track', query: searchTerm, limit: 1}, function (
-		err,
-		data
-	) {
+	spotify.search({type: 'track', query: searchTerm}, function (err, data) {
 		if (err) {
 			return console.log('Error occurred: ' + err);
-		}
-		// console.log(data);
-		console.log('-----------------------');
-		console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
-		console.log(`Track name: ${data.tracks.items[0].name}`);
-		if (data.tracks.items[0].preview_url === null) {
-			console.log('No preview available...');
 		} else {
-			console.log(`Preview URL: ${data.tracks.items[0].preview_url}`);
+			// if no error
+			// For loop is in case a track has multiple artists
+			for (var i = 0; i < data.tracks.items[0].artists.length; i++) {
+				if (i === 0) {
+					console.log('Artist(s):    ' + data.tracks.items[0].artists[i].name);
+				} else {
+					console.log('              ' + data.tracks.items[0].artists[i].name);
+				}
+			}
+			console.log('Song:         ' + data.tracks.items[0].name);
+			console.log('Preview Link: ' + data.tracks.items[0].preview_url);
+			console.log('Album:        ' + data.tracks.items[0].album.name);
 		}
-		console.log(`Album: ${data.tracks.items[0].album.name}`);
-		console.log('-----------------------');
 	});
 }
+
 function movieThis(movie) {
 	axios
 		.get(
@@ -96,8 +93,8 @@ function movieThis(movie) {
 			}
 			// if response is empty call the api again with the "default" movie
 		)
-		.catch(function (error) {
-			console.log(error);
+		.catch(function (err) {
+			console.log(err);
 			console.log('No Results found. ');
 		});
 }
@@ -107,7 +104,7 @@ function doWhatItSays() {
 		let dataArray = data.split(',');
 		command = dataArray[0];
 		searchTerm = dataArray[1];
-		spotifyThis(dataArray);
+		spotifyThis(searchTerm);
 	});
 }
 
