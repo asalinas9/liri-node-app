@@ -69,11 +69,7 @@ function spotifyThis(searchTerm) {
 
 function movieThis(movie) {
 	axios
-		.get(
-			'http://www.omdbapi.com/?t=' +
-				movie +
-				'&y=&plot=short&tomatoes=true&apikey=trilogy'
-		)
+		.get('http://www.omdbapi.com/?t=' + movie + '&y=&plot=short&apikey=trilogy')
 		.then(
 			function (response) {
 				//console.log(response.data);
