@@ -23,10 +23,10 @@ function concertThis(artist) {
 		)
 		.then(function (response) {
 			// Saving response into variable
-			let concerts = response.data;
+			var concerts = response.data;
 
 			// Using For loop to obtain specific data from bands in town api
-			for (let i = 0; i < concerts.length; i++) {
+			for (var i = 0; i < concerts.length; i++) {
 				// Displaying venue info
 				console.log('Venue: ' + concerts[i].venue.name);
 				console.log('City: ' + concerts[i].venue.city);
@@ -97,7 +97,7 @@ function movieThis(movie) {
 
 function doWhatItSays() {
 	fs.readFile('random.txt', 'utf8', function (err, data) {
-		let dataArray = data.split(',');
+		var dataArray = data.split(',');
 		command = dataArray[0];
 		searchTerm = dataArray[1];
 		spotifyThis(searchTerm);
